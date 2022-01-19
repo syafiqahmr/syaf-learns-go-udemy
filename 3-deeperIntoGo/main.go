@@ -56,6 +56,11 @@ func main() {
 	for i, card := range cards {
 		fmt.Println(i, card)
 	}
+
+	// example of type conversion
+	// convert string to byte
+	greeting := []byte("Hi there")
+	fmt.Println(greeting)
 }
 
 // string here specifies what data type the function will return
