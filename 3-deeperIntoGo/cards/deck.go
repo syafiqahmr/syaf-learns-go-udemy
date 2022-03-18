@@ -9,7 +9,7 @@ import (
 	"time"
 )
 
-// Create a new type of 'deck'
+// Create a new custom type of 'deck'
 // which is a slice of strings
 type deck []string
 
@@ -42,6 +42,9 @@ func newDeck() deck {
 }
 
 // note how this function can return 2 separate values
+// why did we choose to not add a receiver here
+// and add deck as a param
+// eg. cards.deal(5) - gives the impression that you modify cards to 5 cards
 func deal(d deck, handSize int) (deck, deck) {
 	return d[:handSize], d[handSize:]
 }
